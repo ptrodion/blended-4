@@ -1,4 +1,5 @@
 import { Container, Header, SearchForm, Section, Text } from 'components';
+import { Filter } from 'components/Filter/Filter';
 
 import { TodoList } from 'components/TodoList/todoList';
 import { useSelector } from 'react-redux';
@@ -16,6 +17,7 @@ export const App = () => {
           {todos.length === 0 && (
             <Text textAlign="center">There are no any todos ... </Text>
           )}
+          <Filter />
           <TodoList />
         </Container>
       </Section>

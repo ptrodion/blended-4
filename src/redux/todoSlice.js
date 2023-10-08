@@ -9,7 +9,9 @@ const todoSlice = createSlice({
     addTodo(state, { payload }) {
       state.items.push(payload);
     },
-    deleteTodo() {},
+    deleteTodo(state, { payload }) {
+      state.items = state.items.filter(el => el.id !== payload);
+    },
   },
 });
 
